@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+	@{
+		var name = Model.MacroParameters["Name"];
+		var img = Umbraco.Media(Model.MacroParameters["CoverImage"]).umbracoFile;
+		var url = Umbraco.Content(Model.MacroParameters["BookLink"]).url;
+		
+	}
+	
+	<div class="loren-book text-center">
+		<a href="@url" title="@name">
+			<img src="@img" alt="@name" />
+		</a>
+		<p>@name</p>
+	</div>

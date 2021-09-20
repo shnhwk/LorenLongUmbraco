@@ -1,0 +1,147 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using ClientDependency.Core.Mvc
+
+@{
+    Layout = null;
+    var url = @Request.Url.ToString();
+
+    var defaultFbImage = "~/media/1001/fb-image.png";
+    var pageFbImage = @Umbraco.Field("facebookPostImage");
+    var image = defaultFbImage;
+
+    if (pageFbImage.ToString() != "")
+        image = Umbraco.Media(pageFbImage.ToString()).Url;
+
+    Html.RequiresCss("~/css/bootstrap.css", 1);
+    Html.RequiresCss("~/css/site.css", 2);
+    Html.RequiresCss("~/css/animate.css", 3);
+    Html.RequiresCss("~/css/font-awesome.css", 4);
+    Html.RequiresCss("~/css/lightbox.css", 5);
+
+    Html.RequiresJs("~/scripts/bootstrap.js", 1);
+    Html.RequiresJs("~/scripts/lightbox.js", 2);
+    Html.RequiresJs("~/scripts/site.js", 3);
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>@Umbraco.Field("browserTitle")</title>
+    <meta name="description" content="@Umbraco.Field("description")">
+    <meta name="keywords" content="@Umbraco.Field("keywords")">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <meta property="og:title" content="@Umbraco.Field("browserTitle")" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="@url" />
+    <meta property="og:image" content="@image" />
+    <meta property="og:description" content="@Umbraco.Field("description")" />
+
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+ 
+
+    @Html.Raw(Html.RenderCssHere())
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../scripts/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+
+</head>
+
+<body data-spy="scroll" data-target="#nav" data-offset="50">
+
+    <header class="">
+        <h1><a href="~/" title="Loren Long - Picturebook Illustrator & Author" name="home">LOREN LONG</a></h1>
+        <h2>Picture Book Illustrator & Author</h2>
+
+
+        <!-- navbar start -->
+        <!-- ================ -->
+        <div id="nav-wrapper" >
+
+            <nav id="nav" class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+
+                    <!-- Toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse smooth-scroll" id="navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="~/#home" title="Loren Long">Home</a>
+                            </li>
+                            <li><a href="~/#books" title="Loren's 'Books">Books</a></li>
+                            <li><a href="~/#about" title="About Loren">About</a></li>
+                            <li><a href="~/#events" title="Loren's Events">Events</a></li>
+                            <li><a href="~/prints" title="Loren's Prints">Prints</a></li>
+                            <li><a href="~/#media" title="Loren's Media">Media</a></li>
+                            <li><a href="~/#archive" title="Loren's Archive">Archive</a></li>
+                            <li><a href="~/faq" title="Loren's FAQ">FAQ</a></li>
+                            <li><a href="~/#contact" title="Contact Loren">Contact</a></li>
+						
+							<li><a href="https://www.facebook.com/loren.long.58" target="_blank" class="social">
+							<i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li> <a href="https://twitter.com/lorenlong" target="_blank" class="social">
+								<i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									
+									<li><a href="https://www.instagram.com/thelorenlong" target="_blank" class="social">
+							<i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+        <!-- navbar end -->
+    </header>
+ 
+    @RenderBody()
+
+    <footer>
+        <div class="container">
+            <div class="row text-center">
+                Copyright © @DateTime.Now.Year - Loren Long
+            </div>
+        </div>
+    </footer>
+    @Html.Partial("GoogleAnalytics")
+
+    
+
+ 
+    @Html.Raw(Html.RenderJsHere())
+				
+
+</body>
+
+</html>

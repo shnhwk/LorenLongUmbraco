@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+    var img = Umbraco.Media(Model.MacroParameters["Image"]).umbracoFile;
+    var lgImage = Umbraco.Media(Model.MacroParameters["PopupImage"]).umbracoFile;
+    var line1 = Model.MacroParameters["Line1"];
+    var line2 = Model.MacroParameters["Line2"];
+    //var fit =(Model.MacroParameters["FitToScreen"].ToString() == "1" );
+
+}
+
+
+<a href="@lgImage" class="book-external-link" data-lightbox="book-popup-image" data-title="@line1 @line2">
+
+    <table class="book-action">
+        <tr>
+            <td>
+                <img class="" src="@img" alt="@line1 @line2" />
+            </td>
+            <td>
+                <span class="line-one">@Html.Raw(@line1)</span><br />
+                <span class="line-two">@Html.Raw(@line2)</span>
+            </td>
+        </tr>
+    </table>
+</a>
+
+
+@*<script>
+    lightbox.option({
+        'fitImagesInViewport': @fit
+    })
+</script>*@

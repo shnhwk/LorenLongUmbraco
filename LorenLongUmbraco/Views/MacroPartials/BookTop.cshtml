@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+    var img = Umbraco.Media(Model.MacroParameters["CoverImage"]).umbracoFile;
+    var bookTitle = Model.MacroParameters["BookTitle"];
+    var desc = Model.MacroParameters["Description"];
+    var purchaseLink = Model.MacroParameters["PurchaseLink"];
+}
+ 
+
+<div class="col-md-4">
+
+    <div class="book-cover-image">
+
+        <img class="cover-image" src="@img" alt="@bookTitle" />
+
+
+        <a href="@purchaseLink" target="_blank" class="btn btn-warning btn-block">Purchase on Indiebound</a>
+    </div>
+</div>
+
+<div class="col-md-8">
+    @Html.Raw(@HttpUtility.HtmlDecode(@desc.ToString()))
+</div>

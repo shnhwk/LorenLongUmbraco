@@ -1,0 +1,38 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+<div class="loren-event col-sm-6 col-md-12">
+	
+	<div class="col-md-offset-2 col-md-3">
+		<h3>@Model.MacroParameters["Title"]</h3>
+		
+			
+		<p class="event-description">
+			@if(!String.IsNullOrEmpty(Model.MacroParameters["EventLink"].ToString())){
+
+				<a href="@(@Model.MacroParameters["EventLink"])" target="_blank">
+					 @Model.MacroParameters["Description"]
+				</a>
+			}else{
+				@Model.MacroParameters["Description"]
+			}
+
+		</p>
+			
+	</div>
+	<div class="col-md-2 text-center"">
+		<p>
+		@Model.MacroParameters["Location"]
+		
+		 
+	
+		
+		</p>
+	</div>
+	<div class="col-md-3 text-center">
+		
+		<p>	<a href="@("https://www.google.com/maps/place/" + @Model.MacroParameters["Date"])" target="_blank">
+		@Model.MacroParameters["Date"]</a></p>
+	</div>
+							
+								
+</div>

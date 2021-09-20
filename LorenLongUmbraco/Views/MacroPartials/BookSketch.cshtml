@@ -1,0 +1,9 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+    var img = Umbraco.Media(Model.MacroParameters["Image"]).umbracoFile;
+    var lgImage = Umbraco.Media(Model.MacroParameters["PopupImage"]).umbracoFile;
+    var desc = Model.MacroParameters["Description"];
+}
+<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+    <a href="@lgImage" data-lightbox="book-sketch" data-title="@desc"><img class="book-sketch" src="@img" alt="@desc" /></a>
+</div>

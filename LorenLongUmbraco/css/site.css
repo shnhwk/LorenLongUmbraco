@@ -1,0 +1,322 @@
+@font-face {
+    font-family: 'Conv_Raleway-Regular';
+    src: url('../fonts/Raleway-Regular.eot');
+    src: url('../fonts/Raleway-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conv_Raleway-Heavy';
+    src: url('../fonts/Raleway-Heavy.eot');
+    src: url('../fonts/Raleway-Heavy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'motor_oil';
+    src: url('../fonts/motor_oil_1937_m54-webfont.woff2') format('woff2'), url('../fonts/motor_oil_1937_m54-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Conv_Raleway-Regular';
+    min-width: 300px;
+    color: #4d4d4d;
+    height: 100%;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+p{
+        text-align: justify;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffb40d;
+    font-family: motor_oil;
+    letter-spacing: 1px;
+}
+
+
+.gray {
+    color: #4d4d4d;
+}
+
+.orange {
+    color: #ffb40d;
+}
+
+.book-sketch-title {
+    font-family: 'Conv_Raleway-Regular';
+    font-size: 1.3em;
+    color: #4d4d4d;
+}
+
+.book-sketch {
+    padding: 30px 0;
+    display: block;
+    margin: 0 auto;
+}
+
+
+header {
+    text-align: center;
+}
+
+    header h1 {
+        margin-bottom: 0;
+    }
+
+        header h1 a, header h1 a:visited, header h1 a:hover, header h1 a:active, header h1 a:focus {
+            color: #ffb40d;
+            text-decoration: none;
+            outline: none;
+        }
+
+
+    header h2 {
+        color: #4d4d4d;
+        margin: 0 0 10px 0;
+        font-size: 15px;
+        font-family: 'Conv_Raleway-Regular';
+    }
+
+section {
+    margin-bottom: 60px;
+}
+
+
+.banner .container {
+    width: 100%;
+    max-width: 1300px;
+}
+
+.loren-book p{
+    text-align:center;
+}
+
+.loren-event {
+    text-align: justify;
+}
+
+    .loren-event h3 {
+        margin-top: 0;
+    }
+
+    .loren-event div {
+        margin-top: 20px;
+    }
+
+    .loren-event .event-description {
+        font-size: .9em;
+    }
+
+
+div.no-padding {
+    padding: 0;
+}
+
+
+
+
+
+#archive .column {
+    padding: 0;
+}
+
+img.archive-image {
+    width: 100%;
+}
+
+.media-view-more {
+    padding-top: 10px;
+    text-align: center;
+}
+
+
+.btn-warning {
+    color: #fff;
+    background-color: #ffb40d;
+    border-color: #ffb40d;
+    border-radius: 0;
+}
+
+div.book h2{
+    font-family:'Conv_Raleway-Regular';
+    color:#4d4d4d;
+    font-size:18px;
+}
+
+
+
+div.book-cover-image {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+    div.book-cover-image img {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+
+.book-quote {
+    font-style: italic;
+    color: #ffb40d;
+}
+
+
+a.book-external-link {
+    text-decoration: none;
+}
+
+table.book-action {
+    margin: 40px 0;
+}
+
+    table.book-action td {
+        padding: 5px;
+        font-size: 18px;
+    }
+
+        table.book-action td:first-child {
+            width: 134px;
+        }
+
+        table.book-action td span.line-one {
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        table.book-action td span.line-two {
+            color: #ffb40d;
+        }
+
+        table.book-action img{
+    min-width:124px;
+}
+
+
+
+
+
+
+#nav-wrapper {
+    height: 50px;
+    margin-bottom: 6px;
+}
+
+
+.navbar {
+    z-index: 2;
+}
+
+
+    .navbar.affix {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        border-bottom: 2px solid #ffb40d;
+    }
+
+.navbar-nav {
+    width: 100%;
+    text-align: left;
+}
+
+
+
+.navbar-default {
+    background-color: #fff;
+    border: none;
+    margin-bottom: 0;
+}
+
+
+    .navbar-default .navbar-nav > li > a {
+        color: #4d4d4d;
+        font-size: 18px;
+        padding: 15px 10px;
+    }
+
+.navbar-collapse {
+    border-bottom: 1px solid transparent;
+}
+
+.navbar-default .navbar-nav > li > a.social{
+    color:#337ab7;
+    text-decoration:none;
+}
+.navbar-default .navbar-nav > li > a.social:hover{
+    color:#23527c;
+    text-decoration:none;
+}
+
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+
+    .navbar-collapse {
+        border-bottom: none;
+    }
+
+    header h1 {
+        font-size: 60px;
+    }
+
+    header h2 {
+        font-size: 21px;
+    }
+
+    .navbar-nav > li {
+        float: none;
+        display: inline-block;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    
+    .navbar-default .navbar-nav > li > a {
+        padding: 15px 7px;
+    }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width:992px) {
+
+    .media-view-more {
+        text-align: right;
+    }
+
+    table.book-action {
+        margin: 40px auto;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        padding: 15px 17px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+        .navbar-default .navbar-nav > li > a {
+        padding: 15px 20px;
+    }
+}

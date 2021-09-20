@@ -1,0 +1,45 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+    var img = Umbraco.Media(Model.MacroParameters["Image"]).umbracoFile;
+    var line1 = Model.MacroParameters["Line1"];
+    var line2 = Model.MacroParameters["Line2"];
+    var text = Model.MacroParameters["Text"];
+
+    var id = Guid.NewGuid().ToString("N");
+}
+
+
+
+<a href="#" class="book-external-link" data-toggle="modal" data-target="#@id">
+
+    <table class="book-action">
+        <tr>
+            <td>
+                <img class="" src="@img" alt="@line1 @line2" />
+            </td>
+            <td>
+                <span class="line-one">@Html.Raw(@line1)</span><br />
+                <span class="line-two">@Html.Raw(@line2)</span>
+            </td>
+        </tr>
+    </table>
+
+
+</a>
+
+
+
+@if (!Request.Url.AbsolutePath.Contains("GetMacroResultAsHtmlForEditor"))
+{
+   
+    <div class="modal fade" id="@id" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="container-fluid">
+                    @Html.Raw(@HttpUtility.HtmlDecode(@text.ToString()))
+                </div>
+            </div>
+        </div>
+    </div>
+
+}

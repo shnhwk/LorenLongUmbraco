@@ -1,0 +1,26 @@
+﻿{
+"propertyEditors": [{
+    "alias": "My.CustomPickerEditor",
+    "name": "MyCustomPickerEditor",
+    "isParameterEditor": true,
+    "editor": {
+        "view": "~/App_Plugins/CustomPicker/customPicker.html"
+    },
+    "defaultConfig": {
+        "ContentType": "ContentType",
+        "StartNodeId": -1,
+        "multiPicker": "1"
+    },
+    "prevalues": {
+        "fields": [{
+            "label": "Start node",
+            "description": "Choose the default folder",
+            "key": "startNodeId",
+            "view": "treepicker"
+        }]
+    }
+}],
+
+"javascript": [
+    "/App_Plugins/CustomPicker/customPicker.controller.js"
+] }

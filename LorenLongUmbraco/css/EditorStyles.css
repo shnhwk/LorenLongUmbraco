@@ -1,0 +1,59 @@
+/**umb_name:h1*/
+h1{}
+
+/**umb_name:h2*/
+h2{}
+
+/**umb_name:h3*/
+h3{}
+
+/**umb_name:h4*/
+h4{}
+
+/**umb_name:h5*/
+h5{}
+
+/**umb_name:h6*/
+h6{}
+
+
+/**umb_name:Fine Print*/
+.small{}
+
+
+
+
+/**umb_name:Upper Case*/
+.text-uppercase{}
+
+/**umb_name:Lower Case*/
+.text-lowercase{}
+
+/**umb_name:Upper Case*/
+.text-uppercase{}
+
+/**umb_name:Capitalized Text*/
+.text-capitalize{}
+
+/**umb_name:Blockquote*/
+blockquote{}
+
+/**umb_name:Book Quote*/
+.book-quote{font-style:italic;
+    color:#ffb40d;}
+
+ 
+
+
+}}
+
+
+
+/**umb_name:Gray*/
+.gray{}
+
+/**umb_name:Orange*/
+.orange{}
+
+/**umb_name:Book Sketch Title*/
+.book-sketch-title{}

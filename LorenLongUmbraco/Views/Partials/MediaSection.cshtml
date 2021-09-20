@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+    var page = Umbraco.Content(1071);
+}
+
+<section id="media">
+    <div class="container-fluid">
+        @page.GetGridHtml("content")
+    </div>
+</section>
+
+

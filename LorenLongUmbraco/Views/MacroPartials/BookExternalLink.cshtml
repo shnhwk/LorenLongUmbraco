@@ -1,0 +1,27 @@
+﻿ @inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+    var img = Umbraco.Media(Model.MacroParameters["Image"]).umbracoFile;
+    var line1 = Model.MacroParameters["Line1"];
+    var line2 = Model.MacroParameters["Line2"];
+    var link = Model.MacroParameters["Link"];
+}
+
+
+
+<a href="@link" target="_blank" class="book-external-link">
+
+    <table class="book-action">
+        <tr>
+            <td>
+                <img class="" src="@img" alt="@line1 @line2" />
+            </td>
+            <td>
+                <span class="line-one">@Html.Raw(@line1)</span><br />
+                <span class="line-two">@Html.Raw(@line2)</span>
+            </td>
+        </tr>
+    </table>
+
+    
+
+</a> 

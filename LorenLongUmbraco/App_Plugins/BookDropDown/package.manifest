@@ -1,0 +1,13 @@
+﻿{
+propertyEditors: [{
+alias: "BookDropDown",
+name: "BookDropDown",
+isParameterEditor: true,
+editor: {
+view: "~/App_Plugins/BookDropDown/BookDropDown.html"
+}
+}],
+javascript: [
+"~/App_Plugins/BookDropDown/BookDropDown.controller.js"
+]
+}

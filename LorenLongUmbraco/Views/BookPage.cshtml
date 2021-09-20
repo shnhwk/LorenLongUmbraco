@@ -1,0 +1,12 @@
+﻿@*@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.BookPage>*@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage 
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "SiteLayout.cshtml";
+}
+ 
+
+<div class="book">
+    @CurrentPage.GetGridHtml("Content")
+</div>
+ 

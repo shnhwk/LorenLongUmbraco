@@ -1,0 +1,7 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+    var img = Umbraco.Media(Model.MacroParameters["SmallImage"]).umbracoFile;
+    var lgImage = Umbraco.Media(Model.MacroParameters["LargeImage"]).umbracoFile;
+    var desc = Model.MacroParameters["Description"];
+}
+<a href="@lgImage" data-lightbox="archive" data-title="@desc"><img class="archive-image" src="@img" alt="@desc" /></a>
